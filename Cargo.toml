@@ -1,0 +1,35 @@
+[package]
+name = "mica-sdk"
+version = "2.0.0-pre0"
+edition = "2021"
+rust-version = "1.85"
+description = "Client library for the Mica network (gRPC over mutual TLS), generated from the public protos"
+license = "Apache-2.0"
+repository = "https://github.com/1080network/rust"
+homepage = "https://mica.io/"
+readme = "README.md"
+keywords = ["mica", "grpc", "payments", "sdk"]
+categories = ["api-bindings"]
+
+[features]
+# Enable the roles you play; only their code is compiled. Shared messages and the mTLS helper are always included.
+default = []
+issuer = []
+acceptor = []
+
+[dependencies]
+prost = "0.14"
+prost-types = "0.14"
+tonic = { version = "0.14", features = ["tls-ring"] }
+tonic-prost = "0.14"
+
+[dev-dependencies]
+rcgen = { version = "0.14", default-features = false, features = ["ring", "pem"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net"] }
+tokio-stream = { version = "0.1", features = ["net"] }
+
+[[example]]
+name = "ping"
+
+[package.metadata.docs.rs]
+all-features = true
