@@ -2,7 +2,7 @@
 name = "mica-sdk"
 version = "2.0.0-pre0"
 edition = "2021"
-rust-version = "1.85"
+rust-version = "1.88"
 description = "Client library for the Mica network (gRPC over mutual TLS), generated from the public protos"
 license = "Apache-2.0"
 repository = "https://github.com/1080network/rust"

@@ -22,7 +22,7 @@ mica-sdk = { version = "2.0.0-pre0", features = ["issuer"] }   # or "acceptor", 
 tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
 ```
 
-Requires Rust 1.85 or later. Versions match the proto release (`v2.0.0-pre0` is `2.0.0-pre0`).
+Requires Rust 1.88 or later. Versions match the proto release (`v2.0.0-pre0` is `2.0.0-pre0`).
 
 ## Connecting
 
